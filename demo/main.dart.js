@@ -8433,7 +8433,7 @@ cG:function cG(a,b,c){this.a=a
 this.b=b
 this.c=c},
 a4F:function a4F(){var _=this
-_.d=_.c=_.a=null
+_.d=_.c=_.b=_.a=null
 _.e=!1},
 a4H:function a4H(a){this.a=a},
 a4I:function a4I(){},
@@ -46900,7 +46900,8 @@ return A.t(A.h6(),$async$uM)
 case 7:m=b
 h=A.br(m.a.h(0,"gigachat_api_key"))
 n.a=h==null?"":h
-A.br(m.a.h(0,"curator_cloud_endpoint"))
+h=A.br(m.a.h(0,"curator_cloud_endpoint"))
+n.b=h==null?"https://us-central1-courier-f5652.cloudfunctions.net/askCurator":h
 p=9
 s=12
 return A.t(A.aMj(A.eC("https://firestore.googleapis.com/v1/projects/courier-f5652/databases/(default)/documents/app_config/ai_settings?key=AIzaSyDXwODJZEWsUpPnBC4E9x-GpuWadhBTUSg",0,null)).xF(B.GZ),$async$uM)
@@ -47116,29 +47117,30 @@ return A.G($async$vj,r)},
 ad8(){var s=new A.a4G(B.jU)
 return A.j(s.$1(8))+"-"+A.j(s.$1(4))+"-4"+A.j(s.$1(3))+"-a"+A.j(s.$1(3))+"-"+A.j(s.$1(12))},
 zU(a,b,c,d){return this.akV(a,b,c,d)},
-akV(a,b,c,d){var s=0,r=A.H(t.lA),q,p=2,o=[],n,m,l,k,j,i,h,g
-var $async$zU=A.I(function(e,f){if(e===1){o.push(f)
-s=p}for(;;)switch(s){case 0:h="http://localhost:8081/askCurator"
+akV(a,b,c,d){var s=0,r=A.H(t.lA),q,p=2,o=[],n=this,m,l,k,j,i,h,g,f,e
+var $async$zU=A.I(function(a0,a1){if(a0===1){o.push(a1)
+s=p}for(;;)switch(s){case 0:g=n.b
+f=g==null?"https://kuryer-yandex-eda-pro-rustore-googleplay-appstore-magnitik74.vercel.app/api/askCurator":g
 p=4
-l=A.eC(h,0,null)
-k=t.N
-j=A.a_(["Content-Type","application/json"],k,k)
+k=A.eC(f,0,null)
+j=t.N
+i=A.a_(["Content-Type","application/json"],j,j)
 s=7
-return A.t(A.aEw(l,B.bh.KA(A.a_(["question",a,"history",b,"lang",c,"country",d],k,t.K),null),j).xF(B.GL),$async$zU)
-case 7:n=f
-if(n.b===200){m=B.bh.rF(B.a6.e3(n.w),null)
-if(J.d(J.d5(m,"success"),!0)&&J.d5(m,"text")!=null){l=B.c.eI(A.be(J.d5(m,"text")))
-k=J.d5(m,"showActionCard")
-if(k==null)k=!1
-j=J.d5(m,"actionType")
-if(j==null)j="register"
-q=new A.cG(l,k,j)
+return A.t(A.aEw(k,B.bh.KA(A.a_(["question",a,"history",b,"lang",c,"country",d],j,t.K),null),i).xF(B.GL),$async$zU)
+case 7:m=a1
+if(m.b===200){l=B.bh.rF(B.a6.e3(m.w),null)
+if(J.d(J.d5(l,"success"),!0)&&J.d5(l,"text")!=null){k=B.c.eI(A.be(J.d5(l,"text")))
+j=J.d5(l,"showActionCard")
+if(j==null)j=!1
+i=J.d5(l,"actionType")
+if(i==null)i="register"
+q=new A.cG(k,j,i)
 s=1
 break}}p=2
 s=6
 break
 case 4:p=3
-g=o.pop()
+e=o.pop()
 s=6
 break
 case 3:s=2
